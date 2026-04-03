@@ -578,24 +578,24 @@
     <h2>Download Aether Terminal</h2>
     <p>Free and open source. Available for all platforms.</p>
     <div class="download-grid">
-      <a id="download-mac" href="https://github.com/nameisashish/aether-terminal/releases/latest" class="download-card" target="_blank">
+      <a id="download-mac" href="https://github.com/nameisashish/aether-landing/releases/latest" class="download-card" target="_blank">
         <div class="os-icon">🍎</div>
         <h4>macOS</h4>
         <p>.dmg (Apple Silicon & Intel)</p>
       </a>
-      <a id="download-win" href="https://github.com/nameisashish/aether-terminal/releases/latest" class="download-card" target="_blank">
+      <a id="download-win" href="https://github.com/nameisashish/aether-landing/releases/latest" class="download-card" target="_blank">
         <div class="os-icon">🪟</div>
         <h4>Windows</h4>
         <p>.exe installer</p>
       </a>
-      <a id="download-linux" href="https://github.com/nameisashish/aether-terminal/releases/latest" class="download-card" target="_blank">
+      <a id="download-linux" href="https://github.com/nameisashish/aether-landing/releases/latest" class="download-card" target="_blank">
         <div class="os-icon">🐧</div>
         <h4>Linux</h4>
         <p>.AppImage / .deb</p>
       </a>
     </div>
     <p style="margin-top:1.5rem;opacity:0.5;font-size:0.85rem;">
-      All downloads available on the <a href="https://github.com/nameisashish/aether-terminal/releases" target="_blank" style="color:var(--accent);">GitHub Releases</a> page.
+      All downloads available on the <a href="https://github.com/nameisashish/aether-landing/releases" target="_blank" style="color:var(--accent);">GitHub Releases</a> page.
     </p>
   </section>
 
@@ -626,7 +626,7 @@
       }
 
       // Fetch latest release and set direct download links
-      fetch('https://api.github.com/repos/nameisashish/aether-terminal/releases/latest')
+      fetch('https://api.github.com/repos/nameisashish/aether-landing/releases/latest')
         .then(function(r) { return r.json(); })
         .then(function(data) {
           if (!data.assets) return;
