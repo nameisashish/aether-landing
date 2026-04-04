@@ -567,6 +567,7 @@
     <div class="nav-links">
       <a href="#features">Features</a>
       <a href="#agents">Agents</a>
+      <a href="#how-to-use">How to Use</a>
       <a href="#download">Download</a>
       <a href="#install-guide">Install Guide</a>
       <a href="https://github.com/nameisashish/aether-terminal" target="_blank">GitHub</a>
@@ -714,6 +715,48 @@
           <p>Handles deployment</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- How to Use -->
+  <section class="how-to-use" id="how-to-use" style="padding: 100px 24px; max-width: 900px; margin: 0 auto;">
+    <h2 style="text-align: center; font-size: 36px; font-weight: 700; margin-bottom: 16px;">How to Use Aether Terminal</h2>
+    <p style="text-align: center; color: var(--muted); font-size: 16px; margin-bottom: 60px;">Your new workflow with the AI-Native Terminal.</p>
+    
+    <div style="display: flex; flex-direction: column; gap: 32px;">
+      
+      <div style="background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 24px; display: flex; gap: 20px;">
+        <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--accent-muted); color: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 700; flex-shrink: 0;">1</div>
+        <div>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">Navigate normally via the PTY Terminal</h3>
+          <p style="color: var(--muted); font-size: 15px; line-height: 1.6;">Use commands like <code>cd path/to/project</code>. As you change directories, the left sidebar <strong>File Explorer</strong> automatically synchronizes to your new workspace. You can confidently run <code>npm install</code>, <code>git status</code>, or use <code>vim</code> just like your normal terminal.</p>
+        </div>
+      </div>
+
+      <div style="background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 24px; display: flex; gap: 20px;">
+        <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--accent-muted); color: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 700; flex-shrink: 0;">2</div>
+        <div>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">Attach Code Context</h3>
+          <p style="color: var(--muted); font-size: 15px; line-height: 1.6;">Click any file in the File Explorer to open it in the built-in <strong>File Viewer</strong> tab. Use <code>Shift + Click</code> to attach specific files to your AI Context. The AI instantly reads the exact files you've attached!</p>
+        </div>
+      </div>
+
+      <div style="background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 24px; display: flex; gap: 20px;">
+        <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--accent-muted); color: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 700; flex-shrink: 0;">3</div>
+        <div>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">Summon the Agents</h3>
+          <p style="color: var(--muted); font-size: 15px; line-height: 1.6;">Toggle the 👥 <strong>Agent Team</strong> in the AI sidebar and type a prompt like <em>"Build a REST API here"</em>. The Supervisor breaks down the task and assigns it to different agents, letting you watch their live activity in the Agent Dashboard.</p>
+        </div>
+      </div>
+
+      <div style="background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 24px; display: flex; gap: 20px;">
+        <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--accent-muted); color: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 700; flex-shrink: 0;">4</div>
+        <div>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">Human-in-the-Loop Approval</h3>
+          <p style="color: var(--muted); font-size: 15px; line-height: 1.6;">Aether guarantees safety. When an agent attempts to write a file or execute a shell command, the system pauses and requests your permission. Hit <code>Enter</code> to approve or <code>Esc</code> to block destructive changes.</p>
+        </div>
+      </div>
+
     </div>
   </section>
 
