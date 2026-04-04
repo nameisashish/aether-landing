@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aether Terminal — AI-Native Terminal for Developers</title>
-  <meta name="description" content="The AI-native terminal with a full multi-agent dev team built in. Powered by Groq, OpenAI, Anthropic, Gemini, and xAI." />
+  <meta name="description" content="The AI-native terminal with Gemma 4 local AI, a full multi-agent dev team, and 7 cloud providers. Free. Open source. Cross-platform." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
@@ -292,6 +292,15 @@
       line-height: 1.6;
     }
 
+    .feature-badge {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
     /* ── Agents Section ── */
     .agents {
       padding: 100px 24px;
@@ -509,6 +518,19 @@
 
     .install-note strong { color: var(--accent-light); }
 
+    .warning-box {
+      margin-top: 20px;
+      padding: 16px 20px;
+      background: rgba(251, 191, 36, 0.06);
+      border: 1px solid rgba(251, 191, 36, 0.15);
+      border-radius: 10px;
+      font-size: 13px;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .warning-box strong { color: var(--yellow); }
+
     /* ── Footer ── */
     footer {
       padding: 40px 24px;
@@ -554,13 +576,13 @@
 
   <!-- Hero -->
   <section class="hero">
-    <div class="hero-badge">✨ Powered by Groq + Llama 3.1 70B</div>
+    <div class="hero-badge">🏠 Gemma 4 Local AI · ⚡ Groq · 🤖 8 AI Agents</div>
     <h1>
       Your Entire Dev Team<br />
       <span class="gradient">Inside a Terminal</span>
     </h1>
     <p>
-      Aether Terminal is an AI-native terminal with 8 specialized agents — an architect, coder, reviewer, tester, and more — all working together to build, test, and deploy your code.
+      Aether Terminal is an AI-native terminal with 8 specialized agents — an architect, coder, reviewer, tester, and more — all working together. Run AI locally with Gemma 4, or use any cloud provider.
     </p>
     <div class="hero-buttons">
       <a href="#download" class="btn-hero btn-primary">
@@ -603,9 +625,15 @@
         <p>Full pseudoterminal with ANSI colors, vim/tmux support, mouse events, and native shell integration. Feels like your system terminal.</p>
       </div>
       <div class="feature-card">
+        <div class="feature-icon">🏠</div>
+        <h3>Local AI — Gemma 4</h3>
+        <p>Run Gemma 4 locally via Ollama. 100% free, 100% private — your code and conversations never leave your machine. No API key required.</p>
+        <span class="feature-badge" style="background: rgba(52, 211, 153, 0.1); color: #34d399;">FREE · OFFLINE</span>
+      </div>
+      <div class="feature-card">
         <div class="feature-icon">🤖</div>
-        <h3>Multi-Provider AI</h3>
-        <p>Groq (default), OpenAI, Anthropic Claude, Google Gemini, and xAI Grok. Switch providers and models instantly.</p>
+        <h3>7 Cloud Providers</h3>
+        <p>Groq (ultra-fast), OpenAI, Anthropic Claude, Google Gemini, xAI Grok, and OpenRouter. Switch providers and models instantly.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">👥</div>
@@ -615,17 +643,12 @@
       <div class="feature-card">
         <div class="feature-icon">🛡️</div>
         <h3>Human-in-the-Loop</h3>
-        <p>Every file write and shell command requires your explicit approval. Full control, zero surprises.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🗂️</div>
-        <h3>File Explorer</h3>
-        <p>Built-in file tree with AI context selection. Select files to give your agents full project awareness.</p>
+        <p>Every file write and shell command requires your explicit approval. Full control, zero surprises. Risk badges show danger level.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">💻</div>
         <h3>Cross-Platform</h3>
-        <p>Built with Tauri v2 for native performance. Available on macOS, Windows, and Linux.</p>
+        <p>Built with Tauri v2 for native performance. Available on macOS, Windows, and Linux. Tiny binary, fast startup.</p>
       </div>
     </div>
   </section>
@@ -697,7 +720,7 @@
   <!-- Download -->
   <section class="download" id="download">
     <h2>Download Aether Terminal</h2>
-    <p>Free and open source. Available for all platforms.</p>
+    <p>Free and open source. Available for all platforms. Includes local AI — no API key needed to get started.</p>
     <div class="download-grid">
       <a id="download-mac" href="https://github.com/nameisashish/aether-terminal/releases/latest" class="download-card" target="_blank">
         <div class="os-icon">🍎</div>
@@ -748,19 +771,27 @@
       <div class="install-step">
         <div class="step-num">3</div>
         <div class="step-content">
-          <p>On first launch, macOS will show a security warning. <strong>Don't double-click.</strong> Instead, <strong>right-click</strong> (or Control-click) the app and select <strong>"Open"</strong>.</p>
+          <p>On first launch, macOS will show a security warning: <em>"Aether Terminal Not Opened — Apple could not verify..."</em></p>
+          <p style="margin-top:6px;"><strong>Don't panic!</strong> This happens because we distribute the app for free without paying for Apple's $99/year code signing certificate. The app is 100% safe.</p>
         </div>
       </div>
-      <div class="install-step">
-        <div class="step-num">4</div>
-        <div class="step-content">
-          <p>Click <strong>"Open"</strong> in the dialog that appears. You only need to do this once — after that it opens normally.</p>
-        </div>
-      </div>
-      <div class="install-note">
-        <strong>Alternative:</strong> If right-click doesn't work, open Terminal and run:
+
+      <div class="warning-box">
+        <strong>⚠️ Fix: "Aether Terminal Not Opened"</strong>
+        <br/><br/>
+        <strong>Method 1 (easiest):</strong> <strong>Right-click</strong> (or Control-click) the app → select <strong>"Open"</strong> → click <strong>"Open"</strong> in the dialog. You only need to do this once.
+        <br/><br/>
+        <strong>Method 2 (terminal):</strong> Open Terminal.app and run:
         <div class="cmd-block">xattr -cr /Applications/Aether\ Terminal.app</div>
-        This removes the quarantine flag. Then open the app normally.
+        <p style="margin-top:8px;font-size:12px;color:var(--muted);">This removes the quarantine flag. Then open the app normally.</p>
+        <br/>
+        <strong>Method 3 (System Settings):</strong> Try to open the app → Go to <strong>System Settings → Privacy & Security</strong> → Scroll down to find <em>"Aether Terminal was blocked"</em> → Click <strong>"Open Anyway"</strong>
+      </div>
+
+      <div class="install-note">
+        <strong>Optional — Run Gemma 4 locally:</strong> Install Ollama for free local AI:
+        <div class="cmd-block">brew install ollama && ollama serve && ollama pull gemma4:e4b</div>
+        Once Ollama is running, Aether Terminal auto-detects it — no API key needed!
       </div>
     </div>
 
@@ -778,20 +809,25 @@
           <p>Run the installer. Windows SmartScreen may show <strong>"Windows protected your PC"</strong>.</p>
         </div>
       </div>
+
+      <div class="warning-box">
+        <strong>⚠️ Fix: "Windows Protected Your PC"</strong>
+        <br/><br/>
+        <strong>Method 1 (easiest):</strong> Click <strong>"More info"</strong> → click <strong>"Run anyway"</strong>.
+        <br/><br/>
+        <strong>Method 2:</strong> Right-click the downloaded <strong>.exe</strong> → <strong>Properties</strong> → Check <strong>"Unblock"</strong> at the bottom → Click <strong>Apply</strong> → Run the installer.
+      </div>
+
       <div class="install-step">
         <div class="step-num">3</div>
-        <div class="step-content">
-          <p>Click <strong>"More info"</strong>, then click <strong>"Run anyway"</strong>.</p>
-        </div>
-      </div>
-      <div class="install-step">
-        <div class="step-num">4</div>
         <div class="step-content">
           <p>Follow the installer prompts. Aether Terminal will be added to your Start menu.</p>
         </div>
       </div>
       <div class="install-note">
-        <strong>Why this happens:</strong> Aether Terminal is open-source and free. Code signing certificates cost hundreds of dollars per year. The app is safe — you can <a href="https://github.com/nameisashish/aether-terminal" target="_blank" style="color:var(--accent);">review the source code</a> yourself.
+        <strong>Why this happens:</strong> Code signing certificates for Windows cost $200-500+/year. Aether Terminal is open-source and free — you can <a href="https://github.com/nameisashish/aether-terminal" target="_blank" style="color:var(--accent);">review the source code</a> yourself.
+        <br/><br/>
+        <strong>Optional — Run Gemma 4 locally:</strong> Download Ollama from <a href="https://ollama.com/download" target="_blank" style="color:var(--accent);">ollama.com</a>, then run: <code>ollama pull gemma4:e4b</code>
       </div>
     </div>
 
@@ -819,6 +855,9 @@
       </div>
       <div class="install-note">
         <strong>No warnings on Linux.</strong> Linux does not have the same gatekeeper restrictions as macOS or Windows. The app runs immediately after installation.
+        <br/><br/>
+        <strong>Optional — Run Gemma 4 locally:</strong>
+        <div class="cmd-block">curl -fsSL https://ollama.com/install.sh | sh && ollama pull gemma4:e4b</div>
       </div>
     </div>
   </section>
@@ -828,10 +867,10 @@
     <p>
       Aether Terminal — Developed by <strong>ASHISH KISHORE</strong>
       <br />
-      Built with Tauri v2, React, xterm.js, and LangChain.
+      Built with Tauri v2, React, xterm.js, LangChain, and Ollama.
       <br />
       <a href="https://github.com/nameisashish/aether-terminal">GitHub</a> ·
-      Default LLM: Groq + Llama 3.1 70B
+      Default AI: Gemma 4 (Local) · Cloud: Groq + OpenAI + Anthropic + Gemini + xAI + OpenRouter
     </p>
   </footer>
 
